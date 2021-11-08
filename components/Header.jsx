@@ -17,13 +17,13 @@ const Header = () => {
       <div className="border-b w-full inline-block border-blue-400 py-8 ">
         <div className="md:float-left block">
           <Link href="/">
-            <span className="cursor-pointer font-bold text-4xl text-white">  Aster Mira </span>
+            <span className="cursor-pointer font-bold text-4xl text-blue">  Aster Mira </span>
           </Link>
-            <p className='text-green-200 font-normal'>Your Best plug for Engaging Contents </p>
+            <p className='text-green-500 font-normal'>Balanced Perspectives to Trending News </p>
         </div>
         <div className="hidden md:float-left md:contents">
           {categories.map((category, index) => (
-            <Link key={index} href={`/category/${category.slug}`}><span className="md:float-right mt-2 align-middle text-gray-400 ml-4 font-semibold cursor-pointer">{category.name}</span></Link>
+            <Link key={index} href={`/category/${category.slug}`}><span className="md:float-right mt-2 align-middle text-blue ml-4 font-semibold cursor-pointer">{category.name}</span></Link>
           ))}
         </div>
       </div>
