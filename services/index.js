@@ -114,7 +114,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
     query GetAdjacentPosts($createdAt: DateTime!,$slug:String!) {
       next:posts(
         first: 1
-        orderBy: createdAt_ASC
+        orderBy: createdAt_DESC
         where: {slug_not: $slug, AND: {createdAt_gte: $createdAt}}
       ) {
         title
@@ -238,7 +238,7 @@ export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
       posts(
-        orderBy: createdAt_ASC
+        orderBy: createdAt_DESC
         last: 3
       ) {
         title
