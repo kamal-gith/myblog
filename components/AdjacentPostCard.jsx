@@ -9,6 +9,7 @@ const AdjacentPostCard = ({ post, position }) => (
     <div className="flex flex-col rounded-lg p-4 items-center justify-center absolute w-full h-full">
       <p className="text-white text-shadow font-semibold text-xs">{moment(post.createdAt).format('MMM DD, YYYY')}</p>
       <p className="text-white text-shadow font-semibold text-2xl text-center">{post.title}</p>
+      {/* <p className="text-white text-shadow font-semibold text-1xl text-center">{comments.length} {' '} Comments</p> */}
     </div>
     <Link href={`/post/${post.slug}`}><span className="z-10 cursor-pointer absolute w-full h-full" /></Link>
     {position === 'LEFT' && (
