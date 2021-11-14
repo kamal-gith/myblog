@@ -90,12 +90,12 @@ const PostDetail = ({ post }) => {
           })}
         </div>
         <div> <h3 className="mb-4 text-pink-500">Share This Story</h3>
-        <FacebookShareButton url={"/"+post.slug}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
-        <TelegramShareButton url={"/"+post.slug}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
-        <LinkedinShareButton url={"/"+post.slug}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
-        <RedditShareButton url={"/"+post.slug}><RedditIcon size={30} round className='mt-2 mr-2'/></RedditShareButton>
-        <WhatsappShareButton url={"/"+post.slug}><WhatsappIcon size={30} round className='mt-2 mr-2'/></WhatsappShareButton>
-        <TwitterShareButton url={"/"+post.slug}><TwitterIcon size={30} round className='mt-2 mr-2'/></TwitterShareButton>
+        <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
+        <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
+        <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
+        <RedditShareButton url={'https://astermira.vercel.app/post/'+post.slug}><RedditIcon size={30} round className='mt-2 mr-2'/></RedditShareButton>
+        <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={30} round className='mt-2 mr-2'/></WhatsappShareButton>
+        <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={30} round className='mt-2 mr-2'/></TwitterShareButton>
 
         </div>
         
