@@ -89,13 +89,13 @@ const PostDetail = ({ post }) => {
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </div>
-        <div> <h3 className="mb-4 text-pink-500">Share on your favorite social media</h3>
-        <FacebookShareButton url={post.uorl}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
-        <TelegramShareButton url={post.url}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
-        <LinkedinShareButton url={post.url}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
-        <RedditShareButton url={post.url}><RedditIcon size={30} round className='mt-2 mr-2'/></RedditShareButton>
-        <WhatsappShareButton url={post.url}><WhatsappIcon size={30} round className='mt-2 mr-2'/></WhatsappShareButton>
-        <TwitterShareButton url={post.url}><TwitterIcon size={30} round className='mt-2 mr-2'/></TwitterShareButton>
+        <div> <h3 className="mb-4 text-pink-500">Share This Story</h3>
+        <FacebookShareButton url={post.slug}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
+        <TelegramShareButton url={post.slug}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
+        <LinkedinShareButton url={post.slug}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
+        <RedditShareButton url={post.slug}><RedditIcon size={30} round className='mt-2 mr-2'/></RedditShareButton>
+        <WhatsappShareButton url={post.slug}><WhatsappIcon size={30} round className='mt-2 mr-2'/></WhatsappShareButton>
+        <TwitterShareButton url={post.slug}><TwitterIcon size={30} round className='mt-2 mr-2'/></TwitterShareButton>
 
         </div>
         
