@@ -19,6 +19,9 @@ const PostDetails = ({ post }) => {
           <div className="col-span-1 lg:col-span-8">
             <PostDetail post={post} />
             <Author author={post.author} />
+            <div>
+              <h3 className='mb-8 text-2xl font-semibold text-center'>Read Next</h3>
+            </div>
             <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
             <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} />

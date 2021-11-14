@@ -90,7 +90,7 @@ const PostDetail = ({ post }) => {
           })}
         </div>
         <div> <h3 className="mb-4 text-pink-500">Share on your favorite social media</h3>
-        <FacebookShareButton url={post.url}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
+        <FacebookShareButton url={post.uorl}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
         <TelegramShareButton url={post.url}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
         <LinkedinShareButton url={post.url}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
         <RedditShareButton url={post.url}><RedditIcon size={30} round className='mt-2 mr-2'/></RedditShareButton>
