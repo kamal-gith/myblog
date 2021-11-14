@@ -2,6 +2,21 @@ import React from 'react';
 
 import moment from 'moment';
 
+import {
+  FacebookShareButton,
+  FacebookIcon,
+  TelegramShareButton,
+  TelegramIcon,
+  RedditShareButton,
+  RedditIcon,
+  TwitterShareButton,
+  TwitterIcon,
+  WhatsappShareButton,
+  WhatsappIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from 'next-share';
+
 const PostDetail = ({ post }) => {
   const getContentFragment = (index, text, obj, type) => {
     let modifiedText = text;
@@ -74,6 +89,16 @@ const PostDetail = ({ post }) => {
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </div>
+        <div> <h3 className="mb-4 text-pink-500">Share on your favorite social media</h3>
+        <FacebookShareButton url={post.url}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
+        <TelegramShareButton url={post.url}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
+        <LinkedinShareButton url={post.url}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
+        <RedditShareButton url={post.url}><RedditIcon size={30} round className='mt-2 mr-2'/></RedditShareButton>
+        <WhatsappShareButton url={post.url}><WhatsappIcon size={30} round className='mt-2 mr-2'/></WhatsappShareButton>
+        <TwitterShareButton url={post.url}><TwitterIcon size={30} round className='mt-2 mr-2'/></TwitterShareButton>
+
+        </div>
+        
       </div>
 
     </>
