@@ -9,8 +9,9 @@ const FeaturedPostCard = ({ post }) => (
     <div className="absolute rounded-lg bg-center bg-gradient-to-b opacity-50 from-gray-400 via-gray-700 to-black w-full h-72 " />
     <div className="flex flex-col rounded-lg p-4 items-center justify-center absolute w-full h-full">
       <p className="mb-4 text-center text-white">{post.title}</p>
-      <div className='bg-green-200 rounded-sm border-none'>
-        <p className="text-xs text-bold text-gray-500">By {post.author.name} | {moment(post.createdAt).format('MMM DD, YYYY')} </p>
+      <div className='rounded-sm border-none'>
+        <span className="text-xs text-semibold text-white"> By {post.author.name} on  {moment(post.createdAt).format('MMM DD, YYYY')}</span>
+        
       </div>
       {/* <p className="inline align-middle ml-2">By {post.author.name}</p> */}
       <div className="flex items-center absolute bottom-5 w-full justify-center">
