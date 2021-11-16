@@ -36,6 +36,7 @@ const Header = () => {
           <div className="align-center mt-2"> 
             <span className='text-pink-500 text-center font-normal'> Welcome to Astermira and thanks for visiting us today: </span>
             <span className='text-green-500 font-normal'> {moment().format('dddd, MMMM Do YYYY')}  </span>
+            <span className='text-pink-500 font-normal'>   {moment().format('h:mm:ss a')}  </span>
           </div>
     </div>
   );
