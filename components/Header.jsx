@@ -3,7 +3,8 @@ import moment from 'moment'
 import Link from 'next/link';
 import { getCategories } from '../services';
 import { BsSearch } from "react-icons/bs";
-
+import Image from 'next/image';
+import logo from './miralogo.jpg'
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -19,11 +20,20 @@ const Header = () => {
       <div className="border-b w-full inline-block border-gray-200 py-8 ">
         <div className="md:float-left block">
           <div className='border-none rounded-lg transform motion-safe:hover:scale-110 border-gray-200'>
+              <Image
+            unoptimized
+            alt=''
+            href='/'
+            height="50px"
+            width="70px"
+            className="cursor-pointer mt-0 mb-0"
+            src={logo}
+          />
           <Link href="/">
-           <span className="font-bold transition duration-500 ease inline-block hover:text-pink-500 text-2xl rounded-sm border-none text-green-500 cursor-pointer">ASTERMIRA </span>
+           <span className="font-bold transition duration-500 ease inline-block hover:text-red-500 text-2xl rounded-sm border-none text-blue-600 cursor-pointer">ASTERMIRA </span>
           </Link>
           </div>
-          <span className='text-sm'>Balanced Perspectives to Trending News </span>
+          <span className='text-sm text-green-300'>Balanced Perspectives to Trending News </span>
         </div>
         
         <div className="hidden md:float-left md:contents ">
@@ -36,7 +46,7 @@ const Header = () => {
           <div className="align-center mt-2"> 
             <span className='text-pink-500 text-center font-normal'> Welcome to Astermira and thanks for visiting us today: </span>
             <span className='text-green-500 font-normal'> {moment().format('dddd, MMMM Do YYYY')}  </span>
-            <span className='text-pink-500 font-normal'>   {moment().format('h:mm:ss a')}  </span>
+            {/* <span className='text-pink-500 font-normal'>   {moment().format('h:mm:ss a')}  </span> */}
           </div>
     </div>
   );
