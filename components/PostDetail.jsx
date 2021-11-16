@@ -89,7 +89,7 @@ const PostDetail = ({ post }) => {
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </div>
-        <div> <h3 className="mb-4 text-pink-500">Share This Story</h3>
+        <div> <h3 className="mb-4 text-pink-500">Share this Story</h3>
         <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
         <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
         <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
