@@ -33,7 +33,7 @@ const Footer = () => {
         
         <div className='border-t border-gray-100 flex items-center justify-center mt-8 items-center'>
             <p className='font-normal'>Follow Us: </p>
-            <Link href="/">
+            <Link href="https://fb.me/astamira">
             <AiFillFacebook className='text-2xl bg-gray-300 mr-4 ml-4 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-green-200'/>
             </Link>
             <Link href="/">
