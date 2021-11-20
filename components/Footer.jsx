@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex items-center justify-center md:justify-space-equally ml-4 mr-4 items-center mt-8">
         <div className='mt-10'>
             <Link href="/">
-                <span className='mt-2 mr-20 font-normal text-gray-600 cursor-pointer'> About Us</span> 
+                <span className='mt-2 mr-20 font-normal cursor-pointer'> About Us</span> 
             </Link>
         </div>
         <div className='mt-10'>
@@ -32,11 +32,11 @@ const Footer = () => {
         </div>
         
         <div className='flex items-center justify-center mt-8 items-center'>
-            <p className='font-normal'>Follow Us: </p>
+            <p className='text-gray-600 font-normal'>Follow Us: </p>
             <Link href="https://fb.me/astamira">
             <AiFillFacebook className='text-2xl bg-gray-300 mr-4 ml-4 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-green-200'/>
             </Link>
-            <Link href="/">
+            <Link href="https://www.instagram.com/astermirablog">
             <AiFillInstagram className='text-2xl bg-gray-300 mr-4 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-pink-200'/>
             </Link>
             <Link href="/">
