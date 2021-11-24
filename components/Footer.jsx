@@ -6,9 +6,9 @@ import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube } f
 const Footer = () => {
   
   return (
-    <div className="bg-black ">
+    <div className="bg-black container mx-auto px-10 mb-8 mt-8 md:w-full">
       
-        <div className="flex items-center justify-center md:justify-space-equally ml-4 mr-4 items-center mt-8">
+        <div className="flex md:items-inline items-center justify-center md:justify-space-equally m-4 mt-8">
         <div className='mt-10'>
             <Link href="/">
                 <span className='mt-2 mr-20 font-normal cursor-pointer'> About Us</span> 

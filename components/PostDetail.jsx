@@ -15,6 +15,10 @@ import {
   WhatsappIcon,
   LinkedinShareButton,
   LinkedinIcon,
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+  EmailShareButton,
+  EmailIcon,
 } from 'next-share';
 
 const PostDetail = ({ post }) => {
@@ -59,9 +63,11 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
-      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12">
+      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 border-t">
         <div className="relative overflow-hidden shadow-md mb-6">
-          <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
+          <h1 className="text-red-700 text-2xl font-bold mb-8 mt-4 mr-4">Word Bites:</h1>
+          <span className="text-purple-700 text-xl font-semibold">{post.excerpt}</span>
+          <img src={post.featuredImage.url} alt="" className="mt-10 object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
@@ -91,12 +97,14 @@ const PostDetail = ({ post }) => {
           })}
         </div>
         <div> <h3 className="mb-4 text-pink-500">Share this Story</h3>
-        <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={30} round className='mt-2 mr-2'/></FacebookShareButton>
-        <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={30} round className='mt-2 mr-2'/></TelegramShareButton>
-        <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={30} round className='mt-2 mr-2'/></LinkedinShareButton>
-        <RedditShareButton url={'https://astermira.vercel.app/post/'+post.slug}><RedditIcon size={30} round className='mt-2 mr-2'/></RedditShareButton>
-        <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={30} round className='mt-2 mr-2'/></WhatsappShareButton>
-        <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={30} round className='mt-2 mr-2'/></TwitterShareButton>
+        <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></FacebookShareButton>
+        <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></TelegramShareButton>
+        <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></LinkedinShareButton>
+        <RedditShareButton url={'https://astermira.vercel.app/post/'+post.slug}><RedditIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></RedditShareButton>
+        <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></WhatsappShareButton>
+        <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></TwitterShareButton>
+        <EmailShareButton url={'https://astermira.vercel.app/post/'+post.slug}><EmailIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></EmailShareButton>
+        <FacebookMessengerShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookMessengerIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></FacebookMessengerShareButton>
 
         </div>
         
