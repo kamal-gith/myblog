@@ -73,8 +73,26 @@ const PostDetail = ({ post }) => {
     <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 border-t">
         <div className="relative overflow-hidden shadow-md mb-6 bg-gray-500 ">
-          <h1 className="text-red-700 text-2xl font-bold m-4 border-t rounded-lg">Headlines</h1>
+          <h1 className="text-red-500 text-2xl font-bold m-4 border-t rounded-lg">Headlines</h1>
           <h2 className="text-white m-4  underline">{post.excerpt}</h2>
+          
+          <div className='flex m-1 px-12 text-sm  py-2'>
+          <h1 className='font-bold mr-2 text-sm '>By:</h1> 
+          <span className="text-gray-900  text-sm mr-8"> {post.author.name}</span>
+
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 128" width="24px" height="24px">
+          <path fill="#fff" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
+          <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
+          <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M81.7 81.7L64 64 88.7 39.3"/>
+          <path fill="none" stroke="#ff5576" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 64L29 64"/>
+          <path fill="#fff" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
+          <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
+        </svg>
+
+          <span className="text-gray-900 mr-20">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+
+          </div>
+          
           <img src={post.featuredImage.url} alt="" className="mt-10 object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
@@ -94,7 +112,6 @@ const PostDetail = ({ post }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <span className="align-middle text-sm">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
-              <span className="align-middle text-sm ml-4"> {moment(post.createdAt).startOf('hour').fromNow()}</span>
             </div>
           </div>
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
