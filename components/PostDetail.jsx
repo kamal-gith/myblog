@@ -76,11 +76,11 @@ const PostDetail = ({ post }) => {
           <h1 className="text-red-500 text-2xl font-bold m-4 border-t rounded-lg">Headlines</h1>
           <h2 className="text-white m-4  underline">{post.excerpt}</h2>
           
-          <div className='flex m-1 px-12 text-sm  py-2'>
-          <h1 className='font-bold mr-2 text-sm '>By:</h1> 
-          <span className="text-gray-900  text-sm mr-8"> {post.author.name}</span>
+          <div className='flex m-2'>
+          <h1 className='mr-1 text-sm'>By:</h1> 
+          <span className="text-gray-900  text-sm mr-4"> {post.author.name}</span>
 
-        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 128" width="24px" height="24px">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 128" width="22px" height="22px">
           <path fill="#fff" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
           <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
           <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M81.7 81.7L64 64 88.7 39.3"/>
@@ -89,7 +89,7 @@ const PostDetail = ({ post }) => {
           <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
         </svg>
 
-          <span className="text-gray-900 mr-20">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+          <span className="text-gray-900">{moment(post.createdAt).startOf('hour').fromNow()}</span>
 
           </div>
           
