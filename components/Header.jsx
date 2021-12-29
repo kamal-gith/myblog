@@ -53,22 +53,22 @@ const Header = () => {
     
     <div className="container mx-auto px-10 mb-8">
       <div className="border-b w-full inline-block border-gray-200 py-8 mb-8 ">
-        <div className="md:float-left block">
+        <div className="flex md:float-left block">
               <Image
             unoptimized
             alt=''
             href='/'
-            height="30px"
-            width="170px"
+            height="50px"
+            width="50px"
             className="cursor-pointer mt-0 mb-0"
             src={logo}
           />
           <div className='border-none rounded-lg transform motion-safe:hover:scale-110 border-gray-200'>
           <Link href="/">
-           <span className="font-bold transition duration-500 ease inline-block hover:text-red-500 text-2xl rounded-sm border-none text-blue-600 cursor-pointer">ASTERMIRA </span>
+           <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-red-500 text-2xl rounded-sm border-none text-blue-600 cursor-pointer">ASTERMIRA </span>
           </Link>
           </div>
-          <span className='text-sm text-green-300'>Balanced Perspectives to Trending News </span>
+          
         </div>
         
         <div className="hidden md:float-left md:contents ">
@@ -79,9 +79,9 @@ const Header = () => {
         </div>
       </div>
           <div className="align-center mt-2"> 
-            <span className='text-black text-center font-semibold'> Welcome to Astermira and thanks for visiting us. </span>
-            <span className='text-red-500 text-center font-semibold'> Read Our Recent Posts Today - </span>
-            <span className='text-black text-center font-semibold'> {moment().format('dddd Do MMMM, YYYY.')}  </span>
+            <span className='text-black text-center'> Welcome to Astermira and thanks for visiting us. </span>
+            <span className='text-red-500 text-center'> Read Our Recent Posts Today - </span>
+            <span className='text-black text-center'> {moment().format('dddd Do MMMM, YYYY.')}  </span>
             
             
             {/* <span className='text-pink-500 font-normal'>   {moment().format('h:mm:ss a')}  </span> */}

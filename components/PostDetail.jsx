@@ -40,12 +40,20 @@ const PostDetail = ({ post }) => {
     }
 
     switch (type) {
-      case 'heading-three':
-        return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+      case 'heading-one':
+        return <h1 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
       case 'paragraph':
         return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+      case 'heading-two':
+        return <h2 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h2>;
+      case 'heading-three':
+        return <h3 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
+      case 'heading-five':
+        return <h5 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h5>;
+      case 'heading-six':
+        return <h6 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h6>;
       case 'image':
         return (
           <img
@@ -64,9 +72,9 @@ const PostDetail = ({ post }) => {
   return (
     <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 border-t">
-        <div className="relative overflow-hidden shadow-md mb-6">
-          <h1 className="text-red-700 text-2xl font-bold mb-8 mt-4 mr-4">Word Bites:</h1>
-          <span className="text-purple-700 text-xl font-semibold">{post.excerpt}</span>
+        <div className="relative overflow-hidden shadow-md mb-6 bg-gray-500 ">
+          <h1 className="text-red-700 text-2xl font-bold m-4 border-t rounded-lg">Headlines</h1>
+          <h2 className="text-white m-4  underline">{post.excerpt}</h2>
           <img src={post.featuredImage.url} alt="" className="mt-10 object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
