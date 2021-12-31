@@ -65,7 +65,7 @@ const Header = () => {
           />
           <div className='border-none rounded-lg transform motion-safe:hover:scale-110 border-gray-200'>
           <Link href="/">
-           <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-red-500 text-2xl rounded-sm border-none text-blue-600 cursor-pointer">ASTERMIRA </span>
+           <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-red-500 text-2xl rounded-sm border-none text-black cursor-pointer underline">astermira</span>
           </Link>
           </div>
           
@@ -79,8 +79,8 @@ const Header = () => {
         </div>
       </div>
           <div className="align-center mt-2"> 
-            <span className='text-black text-center'> Welcome to Astermira and thanks for visiting us. </span>
-            <span className='text-red-500 text-center'> Read Our Recent Posts Today - </span>
+            <span className='text-black text-center'> Welcome to Astermira. </span>
+            <span className='text-red-500 text-center'> Read Our Recent Posts Today </span>
             <span className='text-black text-center'> {moment().format('dddd Do MMMM, YYYY.')}  </span>
             
             

@@ -72,24 +72,27 @@ const PostDetail = ({ post }) => {
   return (
     <>
       <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 border-t">
-        <div className="relative overflow-hidden shadow-md mb-6 bg-gray-500 ">
-          <h1 className="text-red-500 text-2xl font-bold m-4 border-t rounded-lg">Headlines</h1>
-          <h2 className="text-white m-4  underline">{post.excerpt}</h2>
+        <div className="flex flex-col justify-center relative overflow-hidden shadow-md mb-6 bg-gray-400  ">
+          <h1 className="text-red-500 text-3xl font-bold m-4 border-t rounded-lg">Headlines</h1>
+          <h2 className="text-white m-4 text-2xl underline">{post.excerpt}</h2>
           
-          <div className='flex m-2'>
-          <h1 className='mr-1 text-sm'>By:</h1> 
-          <span className="text-gray-900  text-sm mr-4"> {post.author.name}</span>
+          <div className='flex justify-center border-t border-blue-300 space-between'>
+            <h1 className='mr-1 text-sm mt-2'>By:</h1> 
+            <span className="text-gray-900  text-sm mr-4 mt-2 underline"> {post.author.name}</span>
 
-        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 128" width="22px" height="22px">
-          <path fill="#fff" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
-          <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
-          <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M81.7 81.7L64 64 88.7 39.3"/>
-          <path fill="none" stroke="#ff5576" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 64L29 64"/>
-          <path fill="#fff" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
-          <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
-        </svg>
+            <div className="mt-2">
+              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 128" width="22px" height="22px">
+                <path fill="#fff" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
+                <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
+                <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M81.7 81.7L64 64 88.7 39.3"/>
+                <path fill="none" stroke="#ff5576" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 64L29 64"/>
+                <path fill="#fff" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
+                <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
+              </svg>
+            </div>
 
-          <span className="text-gray-900">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+
+            <span className="text-gray-900 mt-2 underline">{moment(post.createdAt).startOf('hour').fromNow()}</span>
 
           </div>
           

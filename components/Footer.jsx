@@ -6,33 +6,29 @@ import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube } f
 const Footer = () => {
   
   return (
-    <div className="bg-black container mx-auto px-10 mb-8 mt-8 md:w-full">
+    <div className="p-2 m-2 md:w-full">
       
-        <div className="flex md:items-inline items-center justify-center md:justify-space-equally m-4 mt-8">
+        <div className="border-t flex justify-evenly">
         <div className='mt-10'>
             <Link href="/">
-                <span className='mt-2 mr-20 font-normal cursor-pointer'> About Us</span> 
+                <span className='text-gray-500 font-bold cursor-pointer'> About Us</span> 
             </Link>
         </div>
         <div className='mt-10'>
             <Link href="/">
-                <span className='mt-2 mr-20 font-normal text-gray-600 cursor-pointer'> Join Our Team</span> 
+                <span className='text-gray-500 font-bold cursor-pointer'> Join Us</span> 
             </Link>
         </div>
-        <div className='mt-10'>
+        <div className='mt-10 cursor-pointer'>
             <Link href="/">
-                <span className='mt-2 mr-20 font-normal text-gray-600 cursor-pointer '> Advertise with Us</span> 
+                <span className='text-gray-500 font-bold cursor-pointer'> Advertise with Us</span> 
             </Link>
         </div>
-        <div className='mt-10'>
-            <Link href="/">
-                <span className='mt-2 mr-20 font-normal text-gray-600 cursor-pointer'> Our Privacy Policy</span> 
-            </Link>
-        </div>
+        
         </div>
         
         <div className='flex items-center justify-center mt-8 items-center'>
-            <p className='text-gray-600 font-normal'>Follow Us: </p>
+            <p className='text-gray-500 font-bold'>We're Social: </p>
             <Link href="https://fb.me/astamira">
             <AiFillFacebook className='text-2xl bg-gray-300 mr-4 ml-4 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-green-200'/>
             </Link>
@@ -46,7 +42,7 @@ const Footer = () => {
             <AiFillTwitterSquare className='text-2xl bg-gray-300 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-blue-200' />
             </Link>
         </div>
-        <div className='flex items-center justify-center mt-8 items-center mb-10'>
+        <div className='flex items-center justify-center mt-8 items-center'>
             <p className='mb-8 text-gray-500 text-sm mt-2'>&copy; 2021 | All Rights Reserved. Astermira, Inc. </p>
         </div>
         
