@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import Head from "next/head"
 
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components';
 import { getPosts, getPostDetails } from '../../services';
@@ -14,6 +15,16 @@ const PostDetails = ({ post }) => {
 
   return (
     <>
+      <Head>
+        <title>{post.title} | Astermira </title>
+        <meta name="description" content={post.excerpt}/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:url" content={post.slug} key="ogurl" />
+        <meta property="og:image" content={post.featuredImage} key="ogimage" />
+        <meta property="og:site_name" content="Astermira" key="ogsitename" />
+        <meta property="og:title" content={post.title} key="ogtitle" />
+        <meta property="og:description" content={post.excerpt} key="ogdesc" />
+      </Head>
       <div className="container mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-8">

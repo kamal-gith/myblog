@@ -71,36 +71,38 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
-      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 border-t">
-        <div className="flex flex-col justify-center relative overflow-hidden shadow-md mb-6 bg-gray-400  ">
-          <h1 className="text-red-500 text-3xl font-bold m-4 border-t rounded-lg">Headlines</h1>
-          <h2 className="text-white m-4 text-2xl underline">{post.excerpt}</h2>
+      <div className="bg-white shadow-sm rounded-lg lg:p-8 pb-12 border-t z-10">
+        <div className="flex flex-col justify-center relative overflow-hidden shadow-md mb-6 mt-3 ">
+        <h1 className="text-center text-capitalize text-3xl capitalize font-semibold">{post.title}</h1>
+          <h2 className=" m-4 text-2xl text-center"> {post.excerpt}</h2>
           
-          <div className='flex justify-center border-t border-blue-300 space-between'>
-            <h1 className='mr-1 text-sm mt-2'>By:</h1> 
-            <span className="text-gray-900  text-sm mr-4 mt-2 underline"> {post.author.name}</span>
-
-            <div className="mt-2">
-              <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 128 128" width="22px" height="22px">
-                <path fill="#fff" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
-                <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 14A50 50 0 1 0 64 114A50 50 0 1 0 64 14Z"/>
-                <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M81.7 81.7L64 64 88.7 39.3"/>
-                <path fill="none" stroke="#ff5576" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 64L29 64"/>
-                <path fill="#fff" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
-                <path fill="none" stroke="#444b54" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="6" d="M64 57A7 7 0 1 0 64 71A7 7 0 1 0 64 57Z"/>
-              </svg>
+          <div className='flex justify-center border-t border-red-200 space-between'>
+          <div className="flex items-center mb-4 mt-4">
+            <div className="flex items-center justify-center lg:mb-0 lg:w-auto mr-5 items-center">
+              <img
+                alt={post.author.name}
+                height="30px"
+                width="30px"
+                className="align-middle rounded-full"
+                src={post.author.photo.url}
+              />
+              <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
             </div>
-
-
-            <span className="text-gray-900 mt-2 underline">{moment(post.createdAt).startOf('hour').fromNow()}</span>
-
+            <div className="font-medium text-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              </svg>
+              <span className="align-middle text-sm">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
+              <span className="text-gray-900 mt-2 ml-5">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+            </div>
+          </div>
           </div>
           
           <img src={post.featuredImage.url} alt="" className="mt-10 object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
-          <div className="flex items-center mb-8 w-full">
-            <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
+          {/* <div className="flex items-center mb-8 w-full">
+            <div className="flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
               <img
                 alt={post.author.name}
                 height="30px"
@@ -116,8 +118,8 @@ const PostDetail = ({ post }) => {
               </svg>
               <span className="align-middle text-sm">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
             </div>
-          </div>
-          <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+          </div> */}
+          {/* <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1> */}
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
 
