@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <>
     <div className="container mx-auto px-10 mb-8">
-      <div className="border-b w-full inline-block border-gray-200 py-8 mb-8 sticky top-0">
+      <div className="border-b w-full inline-block border-gray-200 py-8 mb-8">
         <div className="flex md:float-left block">
               <Image
             unoptimized
