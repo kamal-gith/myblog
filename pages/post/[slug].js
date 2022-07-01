@@ -20,7 +20,7 @@ const PostDetails = ({ post }) => {
         <meta name="description" content={post.excerpt}/>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta property="og:url" content={post.slug} key="ogurl" />
-        <meta property="og:image" content={post.featuredImage} key="ogimage" />
+        <meta property="og:image" content={post.featuredImage.url} key="ogimage" />
         <meta property="og:site_name" content="Astermira" key="ogsitename" />
         <meta property="og:title" content={post.title} key="ogtitle" />
         <meta property="og:description" content={post.excerpt} key="ogdesc" />
