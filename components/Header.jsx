@@ -49,15 +49,7 @@ const Header = () => {
             ))}
         
         </div>
-      </div>
-          <div className="center mt-2"> 
-            <span> Welcome to Astermira. </span>
-            <span className='text-red-500 '> Read Our Recent Posts Today </span>
-            <span> {moment().format('dddd Do MMMM, YYYY.')}  </span>
-            
-            
-            {/* <span className='text-pink-500 font-normal'>   {moment().format('h:mm:ss a')}  </span> */}
-          </div>
+      </div>          
     </div>
     </>
   );
