@@ -8,7 +8,7 @@ const WelcomeSection = () => {
   return (
     <>
     <div className="bg-peach-500 flex flex-col md:flex-row justify-center md:space-x-2 px-10 m-5 border-b mt-10">
-        <div className="md:mt-20 mb-10 md:mr-8 ml-10">
+        <div className="md:mt-20 mb-10 md:mr-8">
             <h1 className="font-bold text-3xl text-gray-600">astermira</h1>
             <span className="text-xl ">brings you balanced perspectives to <br />trending news</span> <br />
             <span className="font-semibold text-2xl text-gray-600 ">Our reportage is</span><br />
@@ -26,7 +26,7 @@ const WelcomeSection = () => {
             src={coverPhoto}
           />
         </div >
-        <div className="md:mt-20 mb-10 ml-10">
+        <div className="md:mt-20 mb-10">
             <h1 className="text-xl">We also publish</h1>
             <span className="font-bold text-xl text-gray-600">exciting articles</span> <br />
             <span className="text-xl">that cover</span><br />
