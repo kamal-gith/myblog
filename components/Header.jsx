@@ -27,7 +27,6 @@ const Header = () => {
             href='/'
             height="50px"
             width="50px"
-            borderRadius="50%"
             className="cursor-pointer mt-0 mb-0"
             src={logo}
           />
