@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="sticky top-0 z-10 bg-red-200 w-full flex justify-center gap-5 py-3 px-3 w-full bg-sky-500">
-        <div className="flex-3 relative py-2 md:py-2 px-1 rounded-md w-full bg-white">
-            <div className="mt-4 flex justify-center">
-            <span className="uppercase mr-4">We are Social </span>
+    <div className="sticky top-0 z-10 bg-blue-800 w-full flex justify-center py-2 px-1 w-full bg-sky-500">
+        <div className="flex justify-center relative py-2 md:py-2 px-1 rounded-md w-full bg-white">
+            <div className="md:flex-3 md:w-[70%] mt-4 flex justify-center">
+            <span className="mr-3"> <strong>astermira</strong> is Social </span>
             <Link href="https://fb.me/astamira">
             <AiFillFacebook className='cursor-pointer mr-2 text-xl md:text-2xl'/>
             </Link>
@@ -23,9 +23,9 @@ const Banner = () => {
             </Link>
             </div>
             
-        </div>
-        <div className="py-3 w-[70%">
+        <div className="hidden md:block mt-1 ml-10 py-2 md:py-2 px-1">
             <span className="text-sm ">{moment().format('dddd Do MMMM, YYYY.')}</span>
+        </div>
         </div>
     </div>
   )
