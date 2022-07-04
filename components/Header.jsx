@@ -9,6 +9,7 @@ import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube } f
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     getCategories().then((newCategories) => {
@@ -20,27 +21,31 @@ const Header = () => {
     <>
     <div className="container mx-auto px-10 mb-8">
       <div className="border-b w-full inline-block border-gray-200 py-8 mb-8">
-        <div className="flex md:float-left block">
+        <div className="flex justify-center md:float-left block">
               <Image
             unoptimized
             alt=''
             href='/'
-            height="50px"
+            height="30px"
             width="50px"
-            borderRadius="50%"
-            className="cursor-pointer mt-0 mb-0"
+            className="cursor-pointer "
             src={logo}
           />
           <div className='border-none rounded-lg transform motion-safe:hover:scale-110 border-gray-200'>
             <Link href="/">
-            <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-black text-red-500 text-2xl cursor-pointer">astermira</span>
+            <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-black text-red-500 md:text-2xl text-xl cursor-pointer">astermira</span>
             </Link>
           </div>
           {/* <div className='ml-20'>
             <span className="mt-5 inline-block text-gray-600 font-semibold justify-end md:hidden">{moment().format('dddd Do MMMM, YYYY.')}</span>
           </div> */}
-          
+        <div onClick={() => setOpen(!open)} className="md:hidden flex justify-center ml-20 flex-col gap-2 cursor-pointer motion-safe:hover:scale-110">
+          <div style={{width:'25px', height:'2px'}} className="bg-blue-900"/>
+          <div style={{width:'20px', height:'1px'}} className="bg-blue-900"/>
+          <div style={{width:'25px', height:'3px'}} className="bg-red-900"/>
         </div>
+        </div>
+        
         
         <div className="hidden md:float-left md:contents ">
           {/* <BsSearch className="md:float-right mt-2 align-middle ml-4 cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500"/> */}
@@ -49,6 +54,16 @@ const Header = () => {
             ))}
         
         </div>
+        {open &&
+        <div className='md:hidden flex flex-wrap justify-center w-full mt-3 border-t'>
+          {categories.map((category, index) => (
+            <Link key={index} href={`/category/${category.slug}`}>
+              <span className="md:float-right mt-2 align-middle text-sm ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500">{category.name}
+              </span>
+            </Link>
+            ))}
+        </div>
+        }
       </div>          
     </div>
     </>
