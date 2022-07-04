@@ -5,7 +5,7 @@ import { getCategories } from '../services';
 import {BsSearch } from "react-icons/bs";
 import Image from 'next/image';
 import logo from './miralogo.jpg'
-import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube } from "react-icons/ai";
+import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube, AiOutlineMenuFold, AiOutlineMenuUnfold } from "react-icons/ai";
 
 const Header = () => {
   const [categories, setCategories] = useState([]);
@@ -39,10 +39,8 @@ const Header = () => {
           {/* <div className='ml-20'>
             <span className="mt-5 inline-block text-gray-600 font-semibold justify-end md:hidden">{moment().format('dddd Do MMMM, YYYY.')}</span>
           </div> */}
-        <div onClick={() => setOpen(!open)} className="md:hidden flex justify-center ml-20 flex-col gap-2 cursor-pointer motion-safe:hover:scale-110">
-          <div style={{width:'25px', height:'2px'}} className="bg-blue-900"/>
-          <div style={{width:'20px', height:'1px'}} className="bg-blue-900"/>
-          <div style={{width:'25px', height:'3px'}} className="bg-red-900"/>
+        <div onClick={() => setOpen(!open)} className="md:hidden flex justify-center ml-20 flex-col cursor-pointer motion-safe:hover:scale-110">
+          <AiOutlineMenuUnfold className="text-3xl text-slate-100"/>
         </div>
         </div>
         
