@@ -5,10 +5,10 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="sticky top-0 z-10 bg-blue-800 w-full flex justify-center py-2 px-1 w-full bg-sky-500">
+    <div className="sticky top-0 z-10 border-blue-400 w-full flex justify-center px-1 w-full bg-sky-500">
         <div className="flex justify-center relative py-2 md:py-2 px-1 rounded-md w-full bg-white">
             <div className="md:flex-3 md:w-[70%] mt-4 flex justify-center">
-            <span className="mr-3"> <strong>astermira</strong> is Social </span>
+            <span className="mr-3"> <strong>astermira</strong> is social </span>
             <Link href="https://fb.me/astamira">
             <AiFillFacebook className='cursor-pointer mr-2 text-xl md:text-2xl'/>
             </Link>

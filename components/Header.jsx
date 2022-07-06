@@ -55,8 +55,8 @@ const Header = () => {
         {open &&
         <div className='md:hidden flex flex-wrap justify-center w-full mt-3 border-t'>
           {categories.map((category, index) => (
-            <Link key={index} href={`/category/${category.slug}`}>
-              <span className="md:float-right mt-2 align-middle text-sm ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500">{category.name}
+            <Link  key={index} href={`/category/${category.slug}`}>
+              <span onClick={() => setOpen((prev)=> !prev)} className="md:float-right mt-2 align-middle text-sm ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500">{category.name}
               </span>
             </Link>
             ))}
