@@ -8,42 +8,41 @@ const Footer = () => {
   return (
     <div className="p-2 m-2 md:w-full">
       
-        <div className="border-t flex justify-evenly">
-        <div className='mt-10'>
+        <div className="border-t border-slate-30 flex justify-evenly">
+        <div className='mt-4'>
             <Link href="/">
-                <span className='text-gray-500 font-bold cursor-pointer'> About Us</span> 
+                <span className='text-sm cursor-pointer'> About Us</span> 
             </Link>
         </div>
-        <div className='mt-10'>
+        <div className='mt-4'>
             <Link href="/">
-                <span className='text-gray-500 font-bold cursor-pointer'> Join Us</span> 
+                <span className='text-sm cursor-pointer'>Career</span> 
             </Link>
         </div>
-        <div className='mt-10 cursor-pointer'>
+        <div className='mt-4'>
             <Link href="/">
-                <span className='text-gray-500 font-bold cursor-pointer'> Advertise with Us</span> 
+                <span className='text-sm cursor-pointer'> Advertisement</span> 
             </Link>
+        </div>
         </div>
         
-        </div>
-        
-        <div className='flex items-center justify-center mt-8 items-center'>
-            <p className='text-gray-500 font-bold'>We're Social: </p>
+        <div className='flex items-center justify-center mt-4 items-center'>
+            <p className='text-slate-400 text-sm'>We're Social: </p>
             <Link href="https://fb.me/astamira">
-            <AiFillFacebook className='text-2xl bg-gray-300 mr-4 ml-4 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-green-200'/>
+            <AiFillFacebook className='text-2xl mr-4 ml-4 cursor-pointer'/>
             </Link>
             <Link href="https://www.instagram.com/astermirablog">
-            <AiFillInstagram className='text-2xl bg-gray-300 mr-4 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-pink-200'/>
+            <AiFillInstagram className='text-2xl mr-4'/>
             </Link>
             <Link href="/">
-            <AiFillYoutube className='text-2xl bg-gray-300 mr-4 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-red-200'/>
+            <AiFillYoutube className='text-2xl mr-4 '/>
             </Link>
             <Link href="/">
-            <AiFillTwitterSquare className='text-2xl bg-gray-300 cursor-pointer transform motion-safe:hover:scale-110 hover:bg-blue-200' />
+            <AiFillTwitterSquare className='text-2xl' />
             </Link>
         </div>
-        <div className='flex items-center justify-center mt-8 items-center'>
-            <p className='mb-8 text-gray-500 text-sm mt-2'>&copy; 2021 | All Rights Reserved. Astermira, Inc. </p>
+        <div className='flex items-center justify-center mt-4 items-center'>
+            <p className='mb-4 text-sm mt-2'> <span className='mr-1'> &copy; 2021 - {new Date().getFullYear()}</span> | <span className="ml-1"> All Rights Reserved. Astermira</span> </p>
         </div>
         
     </div>
