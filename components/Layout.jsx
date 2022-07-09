@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import Footer from './Footer';
 import Header from './Header';
-import Message from './Message';
+// import Message from './Message';
 // import WelcomeSection from './WelcomeSection';
 
 const Layout = ({ children }) => (
@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
     <Header />
     {/* <WelcomeSection /> */}
     {children}
-    <Message />
+    {/* <Message /> */}
     <Footer />
   </>
 );

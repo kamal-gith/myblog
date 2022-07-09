@@ -1,6 +1,6 @@
 import React from 'react'
 import moment from 'moment';
-import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube, AiOutlineHome } from "react-icons/ai";
+import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiOutlineHome } from "react-icons/ai";
 import Link from 'next/link';
 
 const Banner = () => {
@@ -20,9 +20,9 @@ const Banner = () => {
               <Link href="https://www.instagram.com/astermirablog">
                 <AiFillInstagram className='text-gray-600 cursor-pointer mr-2 text-xl md:text-2xl'/>
               </Link>
-              <Link href="/">
+              {/* <Link href="/">
                 <AiFillYoutube className='text-gray-600 text-xl md:text-2xl mr-2 cursor-pointer'/>
-              </Link>
+              </Link> */}
               <Link href="/">
                 <AiFillTwitterSquare className='text-gray-600 cursor-pointer text-xl md:text-2xl' />
               </Link>
