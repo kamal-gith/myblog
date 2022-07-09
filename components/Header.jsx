@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { getCategories } from '../services';
 import {BsSearch } from "react-icons/bs";
 import Image from 'next/image';
-import logo from './miralogo.jpg'
+import logo from './logo.jpg'
 import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube, AiOutlineMenu, AiOutlineMenuFold, AiOutlineMenuUnfold, AiTwotoneFolderOpen } from "react-icons/ai";
 
 const Header = () => {
@@ -26,14 +26,14 @@ const Header = () => {
             unoptimized
             alt=''
             href='/'
-            height="7px"
-            width="40px"
+            height="10px"
+            width="39px"
             className="cursor-pointer "
             src={logo}
           />
           <div className='border-none rounded-lg transform motion-safe:hover:scale-110 border-gray-200'>
             <Link href="/">
-            <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-black text-gray-600 md:text-2xl text-xl cursor-pointer">
+            <span className="m-2 font-bold inline-block text-gray-600 md:text-2xl text-xl cursor-pointer">
               astermira 
             </span>
             </Link>
@@ -58,7 +58,7 @@ const Header = () => {
         </div>
         {open &&
         <>
-          <span className="ml-[50px] uppercase text-gray-400 text-sm">sort by categories</span>
+          <span className="md:hidden ml-[50px] uppercase text-gray-400 text-sm">sort by categories</span>
         <div className='md:hidden flex flex-wrap justify-center w-full mt-3 border-t'>
           {categories.map((category, index) => (
             <Link  key={index} href={`/category/${category.slug}`}>

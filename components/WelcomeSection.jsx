@@ -8,7 +8,7 @@ const WelcomeSection = () => {
   return (
     <>
     <div className="bg-peach-500 flex flex-col md:flex-row justify-center md:space-x-2 px-10 m-5 border-b">
-        <div className="md:mt-20 mb-10 md:mr-8">
+        <div className="md:mt-40 md:mr-8">
             <h1 className="font-bold md:text-2xl text-xl text-gray-600">astermira</h1>
             <span className="text-xl ">brings you balanced perspectives to trending news</span> <br />
             <span className="font-semibold md:text-2xl text-lg text-gray-600 ">Our reportage is</span>
@@ -27,7 +27,7 @@ const WelcomeSection = () => {
             src={coverPhoto}
           />
         </div >
-        <div className="md:mt-20 mb-10">
+        <div className="hidden md:mt-20">
             <h1 className="text-xl">We also publish</h1>
             <span className="font-bold text-xl text-gray-600">exciting articles </span> 
             <span className="text-xl">that cover</span>
@@ -38,7 +38,7 @@ const WelcomeSection = () => {
 
     </div>
     <div className="flex justify-center w-full px-10 m-5 mt-10">
-    <span className='text-xl '> Read Our Recent Posts Today: {moment().format('dddd Do MMMM, YYYY.')}</span>
+    <span className='text-xl '> Read Our Recent Posts Today</span>
     </div>
     </>
   );
