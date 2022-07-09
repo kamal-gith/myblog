@@ -21,7 +21,7 @@ const Header = () => {
     <>
     <div className="container mx-auto px-10 mb-8">
       <div className="border-b w-full inline-block border-gray-200 py-8">
-        <div className="flex justify-center md:float-left block">
+        <div className="mb-4 flex justify-center md:float-left block">
               <Image
             unoptimized
             alt=''
@@ -39,8 +39,9 @@ const Header = () => {
           {/* <div className='ml-20'>
             <span className="mt-5 inline-block text-gray-600 font-semibold justify-end md:hidden">{moment().format('dddd Do MMMM, YYYY.')}</span>
           </div> */}
-        <div onClick={() => setOpen(!open)} className="md:hidden flex justify-center ml-20 flex-col cursor-pointer motion-safe:hover:scale-110">
-          <AiOutlineMenu className="text-3xl text-gray-600"/>
+        <div onClick={() => setOpen((prev)=> !prev)} className="md:hidden flex justify-center ml-20 flex-col cursor-pointer motion-safe:hover:scale-110">
+          {!open? <AiOutlineMenu className="text-3xl text-gray-600"/> : <span className="text-2xl text-gray-600">X</span> }
+          
         </div>
         </div>
         
@@ -53,6 +54,8 @@ const Header = () => {
         
         </div>
         {open &&
+        <>
+          <span className="ml-[150px] uppercase text-gray-400 text-sm">explore our categories</span>
         <div className='md:hidden flex flex-wrap justify-center w-full mt-3 border-t'>
           {categories.map((category, index) => (
             <Link  key={index} href={`/category/${category.slug}`}>
@@ -61,6 +64,7 @@ const Header = () => {
             </Link>
             ))}
         </div>
+        </>
         }
       </div>          
     </div>
