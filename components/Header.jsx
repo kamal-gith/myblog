@@ -33,9 +33,12 @@ const Header = () => {
           />
           <div className='border-none rounded-lg transform motion-safe:hover:scale-110 border-gray-200'>
             <Link href="/">
-            <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-black text-gray-600 md:text-2xl text-xl cursor-pointer">astermira</span>
+            <span className="m-3 font-bold transition duration-500 ease inline-block hover:text-black text-gray-600 md:text-2xl text-xl cursor-pointer">
+              astermira 
+            </span>
             </Link>
           </div>
+            
           {/* <div className='ml-20'>
             <span className="mt-5 inline-block text-gray-600 font-semibold justify-end md:hidden">{moment().format('dddd Do MMMM, YYYY.')}</span>
           </div> */}
@@ -55,7 +58,7 @@ const Header = () => {
         </div>
         {open &&
         <>
-          <span className="ml-[150px] uppercase text-gray-400 text-sm">explore our categories</span>
+          <span className="ml-[50px] uppercase text-gray-400 text-sm">sort by categories</span>
         <div className='md:hidden flex flex-wrap justify-center w-full mt-3 border-t'>
           {categories.map((category, index) => (
             <Link  key={index} href={`/category/${category.slug}`}>
