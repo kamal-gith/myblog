@@ -76,8 +76,8 @@ const PostDetail = ({ post }) => {
         <h1 className="text-center text-capitalize text-3xl capitalize font-semibold">{post.title}</h1>
           <h2 className=" m-4 text-2xl text-center"> {post.excerpt}</h2>
           
-          <div className='flex justify-center border-t border-red-200 space-between'>
-          <div className="flex items-center mb-4 mt-4">
+          <div className='flex justify-center border-t border-gray-200 space-between'>
+          <div className="flex items-center mt-4">
             <div className="flex items-center justify-center lg:mb-0 lg:w-auto mr-5 items-center">
               {/* <img
                 alt={post.author.name}
@@ -86,14 +86,14 @@ const PostDetail = ({ post }) => {
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               /> */}
-              <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
-            </div>
+              <p className="inline align-middle text-gray-500 ml-2 text-md">{post.author.name} </p>
+            </div> <div className='h-2 w-2 mr-2 bg-gray-300 rounded-full' />
             <div className="font-medium text-gray-700">
               {/* <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg> */}
               {/* <span className="align-middle text-sm">{moment(post.createdAt).format('MMM DD, YYYY')}</span> */}
-              <span className="text-gray-900 mt-2 ml-3">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+              <span className="text-gray-500 mt-2 text-md ml-3">{moment(post.createdAt).startOf('hour').fromNow()}</span>
             </div>
           </div>
           </div>
@@ -126,15 +126,17 @@ const PostDetail = ({ post }) => {
             return getContentFragment(index, children, typeObj, typeObj.type);
           })}
         </div>
-        <div> <h3 className="mb-4 text-pink-500">Share this Story</h3>
-        <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></FacebookShareButton>
-        <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></TelegramShareButton>
-        <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></LinkedinShareButton>
-        <RedditShareButton url={'https://astermira.vercel.app/post/'+post.slug}><RedditIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></RedditShareButton>
-        <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></WhatsappShareButton>
-        <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></TwitterShareButton>
-        <EmailShareButton url={'https://astermira.vercel.app/post/'+post.slug}><EmailIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></EmailShareButton>
-        <FacebookMessengerShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookMessengerIcon size={30} round className='mt-2 mr-2 transform motion-safe:hover:scale-110'/></FacebookMessengerShareButton>
+        <div className=" flex border-t border-gray-100 item-center p-3 pt-10 text-center "> 
+        <span className=" rounded-md text-sm text-gray-600 font-bold mr-2">Kindly Share this Story</span>
+        <div className='flex gap-2 item-center'>
+          <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={25} round className='transform motion-safe:hover:scale-110'/></FacebookShareButton>
+          <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={25} round className='transform motion-safe:hover:scale-110'/></TelegramShareButton>
+          <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={25} round className='transform motion-safe:hover:scale-110'/></LinkedinShareButton>
+          <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={25} round className='transform motion-safe:hover:scale-110'/></WhatsappShareButton>
+          <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={25} round className='transform motion-safe:hover:scale-110'/></TwitterShareButton>
+          <EmailShareButton url={'https://astermira.vercel.app/post/'+post.slug}><EmailIcon size={25} round className='transform motion-safe:hover:scale-110'/></EmailShareButton>
+        </div>
+
 
         </div>
         

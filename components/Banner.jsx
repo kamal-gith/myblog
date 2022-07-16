@@ -29,7 +29,7 @@ const Banner = () => {
               </div>
             
         <div className=" mt-1 ml-4 py-2 md:py-2 px-1">
-            <span className="text-[12px] text-bold text-gray-200 uppercase">{moment().format('dddd Do MMM, YYYY.')}</span>
+            <span className="text-[12px] text-bold text-gray-200 uppercase">{moment().format('ddd  Do MMM, YYYY.')}</span>
         </div>
         </div>
     </div>
