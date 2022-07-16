@@ -127,7 +127,7 @@ const PostDetail = ({ post }) => {
           })}
         </div>
         <div className=" flex border-t border-gray-100 item-center p-3 pt-10 text-center "> 
-        <span className=" rounded-md text-sm text-gray-600 font-bold mr-2">Kindly Share this Story</span>
+        <span className=" rounded-md text-sm text-gray-600 font-bold mr-2">Kindly Share</span>
         <div className='flex gap-2 item-center'>
           <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={25} round className='transform motion-safe:hover:scale-110'/></FacebookShareButton>
           <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={25} round className='transform motion-safe:hover:scale-110'/></TelegramShareButton>
