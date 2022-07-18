@@ -102,6 +102,7 @@ const PostDetail = ({ post }) => {
             h3: ({ children }) => <h3 className='text-xl font-semibold mb-4 mt-4'>{children}</h3>,
             h4: ({ children }) => <h4 className='text-lg font-semibold mb-4 mt-4'>{children}</h4>,
             h5: ({ children }) => <h5 className='text-md font-semibold mb-4 mt-4'>{children}</h5>,
+            p: ({ children }) => <p className="mb-8">{children}</p>,
           }}
         />
 
