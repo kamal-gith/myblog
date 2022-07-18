@@ -84,7 +84,7 @@ const PostDetail = ({ post }) => {
         <RichText
           content={post.content.raw.children}
           renderers={{
-          code_block: ({ children }) => <div className=''> <pre className='flex min-h-full text-sm leading-6'><code className='pt-4 pb-4 px-4 bg-blue-900 text-white'>{children}</code></pre></div>,           
+          code_block: ({ children }) => <div className='mb-8'> <pre className='flex min-h-full text-sm leading-6'><code className='pt-4 rounded-lg pb-4 px-4 bg-black text-yellow-300'>{children}</code></pre></div>,           
           // img: ({ src, altText, height, width }) => (
             //   <div className='w-full flex justify-center'>
             //     <Image src={src} alt={altText} height={height} width={width} objectFit='cover' />
