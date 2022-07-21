@@ -4,6 +4,7 @@ import { RichText } from '@graphcms/rich-text-react-renderer';
 
 import { FacebookShareButton, FacebookIcon, TelegramShareButton, TelegramIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon,
   LinkedinShareButton, LinkedinIcon, } from 'next-share';
+import Image from 'next/image';
 
 const PostDetail = ({ post }) => {
 
