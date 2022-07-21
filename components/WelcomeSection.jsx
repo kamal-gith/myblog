@@ -10,10 +10,10 @@ const WelcomeSection = () => {
     <div className="bg-peach-500 flex flex-col md:flex-row justify-center md:space-x-2 px-10 m-5 border-b">
         <div className="md:mt-40 md:mr-8">
             <h1 className="font-bold md:text-2xl text-xl text-gray-600">astermira</h1>
-            <span className="text-xl ">brings you balanced perspectives to trending news</span> <br />
-            <span className="font-semibold md:text-2xl text-lg text-gray-600 ">Our reportage is</span>
+            <span className="text-xl ">brings you balanced perspectives to trending news. </span>
+            <span className="font-semibold md:text-2xl text-lg text-gray-600 ">Our reportage is </span>
             <span className="font-semibold text-xl mr-1 ml-2 text-blue-700">authentic</span>
-            <span className="text-xl text-gray-600 mr-2"> and </span>
+            <span className="text-xl text-gray-600">and </span>
             <span className="font-semibold md:text-2xl text-lg text-red-400">unbiased</span>
         </div>
         
