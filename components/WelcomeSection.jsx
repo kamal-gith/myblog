@@ -7,14 +7,13 @@ import coverPhoto from "./welcome.jpg"
 const WelcomeSection = () => {
   return (
     <>
-    <div className="bg-peach-500 flex flex-col md:flex-row justify-center md:space-x-2 px-10 m-5 border-b">
-        <div className="md:mt-40 md:mr-8">
+    <div className="bg-blue-95 flex flex-col rounded-lg shadow-sm md:flex-row justify-center items-center md:space-x-2 py-2 border-b">
+        <div className="md:mt-30 md:mr-8 leading-9 p-3 text-center">
             <h1 className="font-bold md:text-2xl text-xl text-gray-600">astermira</h1>
-            <span className="text-xl ">brings you balanced perspectives to trending news</span> <br />
-            <span className="font-semibold md:text-2xl text-lg text-gray-600 ">Our reportage is</span>
-            <span className="font-semibold text-xl mr-1 ml-2 text-blue-700">authentic</span>
-            <span className="text-xl text-gray-600 mr-2"> and </span>
-            <span className="font-semibold md:text-2xl text-lg text-red-400">unbiased</span>
+            <span className="text-lg md:text-xl">brings you balanced perspectives to trending news. Our reportage is </span> <br />
+            <span className="font-semibold text-lg md:text-xl text-blue-700">authentic </span>
+            <span className="text-xl text-gray-600 mr-2">and</span>
+            <span className="font-semibold text-lg md:text-xl text-red-400">unbiased</span>.
         </div>
         
         <div className="hidden md:block mb-10 mr-10">
