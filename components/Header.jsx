@@ -62,7 +62,7 @@ const Header = () => {
         <div className='md:hidden flex justify-center items-center flex-col mt-3 h-max bg-blue-80 rounded-lg py-4'>
           {categories.map((category, index) => (
             <Link  key={index} href={`/category/${category.slug}`}>
-              <span onClick={() => setOpen((prev)=> !prev)} className="mt-2 align-middle text-sm font-semibold ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500">{category.name}
+              <span onClick={() => setOpen((prev)=> !prev)} className="mt-2 align-middle text-sm font-semibold ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500 border-b">{category.name}
               </span>
             </Link>
             ))}
