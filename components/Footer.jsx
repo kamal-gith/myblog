@@ -5,9 +5,9 @@ import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube } f
 const Footer = () => {
   
   return (
-    <div className="p-2 m-2 md:w-full">
+    <div className="bg-blue-50 px-4 my-2 mx-6 rounded-lg shadow-md m-2 md:w-full">
       
-        <div className="border-t border-gray-100 flex justify-evenly">
+        <div className="flex justify-evenly">
         <div className='mt-4'>
             <Link href="/">
                 <span className='text-sm cursor-pointer'> About Us</span> 
@@ -27,18 +27,29 @@ const Footer = () => {
         
         <div className=' text-gray-600 flex items-center justify-center mt-4 items-center'>
             <p className='text-sm'>We're Social: </p>
-            <Link href="https://fb.me/astamira">
-            <AiFillFacebook className='text-2xl mr-4 ml-4 cursor-pointer'/>
-            </Link>
-            <Link href="https://www.instagram.com/astermirablog">
-            <AiFillInstagram className='text-2xl mr-4'/>
-            </Link>
-            <Link href="/">
-            <AiFillYoutube className='text-2xl mr-4 '/>
-            </Link>
-            <Link href="/">
-            <AiFillTwitterSquare className='text-2xl' />
-            </Link>
+            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full mr-2 ml-2'>
+                <Link href="https://fb.me/astamira">
+                <AiFillFacebook className='text-2xl cursor-pointer'/>
+                </Link>
+            </div>
+            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full mr-2'>
+                <Link href="https://www.instagram.com/astermirablog">
+                <AiFillInstagram className='text-2xl cursor-pointer'/>
+                </Link>
+            </div>
+            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full mr-2'>
+                <Link href="/">
+                <AiFillYoutube className='text-2xl cursor-pointer'/>
+                </Link>
+            </div>
+            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full'>
+                <Link href="/">
+                <AiFillTwitterSquare className='text-2xl cursor-pointer' />
+                </Link>
+            </div>
+            
+            
+            
         </div>
         <div className='flex items-center justify-center mt-2 items-center'>
             <p className='mb-4 text-[10px] mt-2'> <span className='mr-1'> &copy; 2021 - {new Date().getFullYear()}</span> | <span className="ml-1"> All Rights Reserved. astermira, Inc.</span> </p>

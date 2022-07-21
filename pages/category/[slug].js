@@ -17,7 +17,10 @@ const CategoryPost = ({ posts }) => {
         <div className="col-span-1 lg:col-span-8">
           {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />
+            
           ))}
+      <span className={`${(!posts.length ) ? 'block' : 'hidden'} py-8 text-md text-gray-600`}>Sorry, no post available for this category yet... Kindly check posts from other categories.</span>
+
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">

@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="sticky top-0 z-10 border-blue-400 w-full flex justify-center px-1 w-full bg-sky-500">
-        <div style={{backgroundColor:"black"}} className="flex justify-center relative py-2 md:py-2 px-1 w-full">
+    <div className="sticky top-0 z-10 border-blue-400 w-full flex justify-center px-1 w-full bg-black">
+        <div className="flex justify-center relative py-2 md:py-2 px-1 w-full">
             <div className="mt-3 mr-10 md:mr-10">
               <Link href='/'>
                 <AiOutlineHome size={25} className="text-gray-400 cursor-pointer"/>
@@ -29,7 +29,7 @@ const Banner = () => {
               </div>
             
         <div className=" mt-1 ml-4 py-2 md:py-2 px-1">
-            <span className="text-[12px] text-bold text-gray-200 uppercase">{moment().format('ddd  Do MMM, YYYY.')}</span>
+            <span className="text-[14px] text-bold text-gray-200 capitalize ml-5">{moment().format('ddd.  Do MMM, YYYY.')}</span>
         </div>
         </div>
     </div>

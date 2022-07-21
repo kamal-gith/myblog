@@ -58,11 +58,11 @@ const Header = () => {
         </div>
         {open &&
         <>
-          <span className="md:hidden ml-[50px] uppercase text-gray-400 text-sm">sort by categories</span>
+          <span className="md:hidden ml-[50px] uppercase text-gray-400 text-sm text-center">sort Posts by categories</span>
         <div className='md:hidden flex flex-wrap justify-center w-full mt-3 border-t'>
           {categories.map((category, index) => (
             <Link  key={index} href={`/category/${category.slug}`}>
-              <span onClick={() => setOpen((prev)=> !prev)} className="md:float-right mt-2 align-middle text-sm ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500">{category.name}
+              <span onClick={() => setOpen((prev)=> !prev)} className="mt-2 align-middle text-sm font-semibold ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500">{category.name}
               </span>
             </Link>
             ))}
