@@ -85,7 +85,7 @@ const PostDetail = ({ post }) => {
         <RichText
           content={post.content.raw.children}
           renderers={{
-          code_block: ({ children }) => <div className='overflow-auto mb-8 p-2'> <pre className=' shadow-sm flex min-h-full text-sm leading-6'><code className='pt-4 rounded-lg pb-4 px-4 border-l-4 border-green-700 w-full bg-white text-gray-700'>{children}</code></pre></div>,           
+          code_block: ({ children }) => <div className='overflow-auto mb-8 p-1 rounded-lg border-l-4 border-r-4 border-green-600 shadow-lg'> <pre className=' rounded-md flex min-h-full text-sm leading-6 w-full'><code className='pt-4 pb-4 px-5 bg-white text-gray-700'>{children}</code></pre></div>,           
           // img: ({ src, altText, height, width }) => (
           //     <div className='w-full flex justify-center'>
           //       <Image src={src} alt={altText} height={height} width={width} objectFit='cover' />
