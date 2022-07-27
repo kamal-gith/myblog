@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import moment from 'moment';
 import { RichText } from '@graphcms/rich-text-react-renderer';
+import Prism from 'prismjs';
+import 'prismjs/plugins/line-numbers/prism-line-numbers';
+import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
 
 import { FacebookShareButton, FacebookIcon, TelegramShareButton, TelegramIcon, TwitterShareButton, TwitterIcon, WhatsappShareButton, WhatsappIcon,
   LinkedinShareButton, LinkedinIcon, } from 'next-share';
@@ -8,6 +12,9 @@ import Image from 'next/image';
 
 const PostDetail = ({ post }) => {
 
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
   // const getContentFragment = (index, text, obj, type) => {
   //   let modifiedText = text;
 
@@ -85,7 +92,7 @@ const PostDetail = ({ post }) => {
         <RichText
           content={post.content.raw.children}
           renderers={{
-          code_block: ({ children }) => <div className='overflow-auto mb-8 p-1 rounded-lg border-l-4 border-r-4 border-green-600 shadow-lg'> <pre className=' rounded-md flex min-h-full text-sm leading-6 w-full'><code className='pt-4 pb-4 px-5 bg-white text-gray-700'>{children}</code></pre></div>,           
+          code_block: ({ children }) => <div className='overflow-auto mb-8 p-1 shadow-lg'> <pre className='line-numbers language-js rounded-md flex min-h-full text-sm leading-6 w-full'><code className=''>{children}</code></pre></div>,           
           // img: ({ src, altText, height, width }) => (
           //     <div className='w-full flex justify-center'>
           //       <Image src={src} alt={altText} height={height} width={width} objectFit='cover' />
@@ -104,6 +111,7 @@ const PostDetail = ({ post }) => {
             h4: ({ children }) => <h4 className='text-lg font-semibold mb-4 mt-4'>{children}</h4>,
             h5: ({ children }) => <h5 className='text-md font-semibold mb-4 mt-4'>{children}</h5>,
             p: ({ children }) => <p className="mb-8">{children}</p>,
+            blockquote: ({ children }) => <blockquote className="border-l-4 border-green-100 mb-8 italic font-sans leading-[1.6] relative px-6 text-[#555555] text-[1.2em] w-full">{children}</blockquote>,
           }}
         />
 
