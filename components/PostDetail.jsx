@@ -98,7 +98,7 @@ const PostDetail = ({ post }) => {
           //       <Image src={src} alt={altText} height={height} width={width} objectFit='cover' />
           //     </div>
           //   ),
-            a: ({ children, href, openInNewTab }) => (<a href={href} target={openInNewTab ? '_blank' : '_self'} rel="noreferrer"  className='underline'>
+            a: ({ children, href, openInNewTab }) => (<a href={href} target={openInNewTab ? '_blank' : '_self'} rel="noreferrer"  className='hover:underline text-blue-700 hover:text-underline'>
                 {children}
               </a>
             ),
@@ -111,7 +111,7 @@ const PostDetail = ({ post }) => {
             h4: ({ children }) => <h4 className='text-lg font-semibold mb-4 mt-4'>{children}</h4>,
             h5: ({ children }) => <h5 className='text-md font-semibold mb-4 mt-4'>{children}</h5>,
             p: ({ children }) => <p className="mb-8">{children}</p>,
-            blockquote: ({ children }) => <blockquote className="border-l-4 border-green-100 mb-8 italic font-sans leading-[1.6] relative px-6 text-[#555555] text-[1.2em] w-full">{children}</blockquote>,
+            blockquote: ({ children }) => <div className='shadow-md border-l-[1px] rounded-md border-indigo-200 mb-8'><blockquote className="leading-[2] italic font-sans relative px-6 text-[#555555] text-md">{children}</blockquote></div>
           }}
         />
 
