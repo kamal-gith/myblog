@@ -76,25 +76,24 @@ const PostDetail = ({ post }) => {
 
           {/* <h2 className=" m-4 text-lg text-center"> {post.excerpt}</h2> */}
           
-          <div className='flex justify-left lg:justify-center p-5'>
+          <div className='flex justify-left lg:justify-center p-3'>
           <div className="flex items-left mt-4">
             <Image
               unoptimized
               alt={post.author.name}
               height="50px"
               width="50px"
-              className="align-middle rounded-full"
+              className="rounded-full"
               src={post.author.photo.url}
             />
-            <div className="flex flex-col ml-6">
-              <p className="text-md">{post.author.name} </p>
-              <span className="text-gray-400 text-md">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+            <div className="flex flex-col ml-3">
+              <p className="">{post.author.name} </p>
+              <span className="text-gray-400 text-sm">{moment(post.createdAt).startOf('hour').fromNow()}</span>
             </div> 
 
-            <div className='flex lg:gap-8 gap-4 ml-8'>
+            <div className='flex lg:gap-8 gap-3 ml-6'>
               <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={25} round className='transform motion-safe:hover:scale-110'/></FacebookShareButton>
               <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={25} round className='transform motion-safe:hover:scale-110'/></LinkedinShareButton>
-              <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={25} round className='transform motion-safe:hover:scale-110'/></WhatsappShareButton>
               <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={25} round className='transform motion-safe:hover:scale-110'/></TwitterShareButton>
             </div>
 

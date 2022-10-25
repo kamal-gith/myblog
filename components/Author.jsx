@@ -4,15 +4,15 @@ import Image from 'next/image';
 import { graphCMSImageLoader } from '../util';
 
 const Author = ({ author }) => (
-  <div className="py-5 px-10 relative bg-gradient-to-r from-blue-100 flex justify-center mb-10 rounded-lg">
+  <div className="py-5 relative bg-gradient-to-r from-blue-100 flex justify-center mb-10 rounded-lg">
     
-    <div className="mr-10 ">
+    <div className="mr-4 ">
       <Image
         unoptimized
         loader={graphCMSImageLoader}
         alt={author.name}
-        height="70px"
-        width="70px"
+        height="100px"
+        width="100px"
         className="align-middle rounded-full"
         src={author.photo.url}
       />
