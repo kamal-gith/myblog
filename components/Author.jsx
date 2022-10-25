@@ -4,12 +4,9 @@ import Image from 'next/image';
 import { grpahCMSImageLoader } from '../util';
 
 const Author = ({ author }) => (
-  <div className="text-center py-5 px-10 relative border-b border-gray-200 mb-20">
+  <div className="py-5 px-10 relative bg-gradient-to-r from-blue-100 flex justify-center mb-10 rounded-lg">
     
-    <span className='text-sm text-gray-400 capitalized'>Posted by:</span><br /> 
-    <span className="text-gray-500 capitalize mb-2 font-semibold">  {author.name}</span>
-    <p className="text-black text-sm mb-2">{author.bio}</p>
-    <div className="mb-8 ">
+    <div className="mr-10 ">
       <Image
         unoptimized
         loader={grpahCMSImageLoader}
@@ -19,6 +16,11 @@ const Author = ({ author }) => (
         className="align-middle rounded-full"
         src={author.photo.url}
       />
+    </div>
+    <div className="items-left">
+    <span className='text-[12px] uppercase'>Written by:</span><br /> 
+    <span className="text-gray-600 font-semibold capitalize text-md">  {author.name}</span>
+    <p className="text-black text-sm">{author.bio}</p>
     </div>
   </div>
   

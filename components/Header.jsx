@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <>
-    <div className="container mx-auto px-10 mb-8">
+    <div className="container mx-auto px-6 ">
       <div className=" w-full inline-block py-2">
         <div className="mb-4 flex justify-center md:float-left block">
               <Image
@@ -27,7 +27,7 @@ const Header = () => {
             alt=''
             href='/'
             height="10px"
-            width="39px"
+            width="40px"
             className="cursor-pointer "
             src={logo}
           />
@@ -59,10 +59,10 @@ const Header = () => {
         {open &&
         <>
           <span className="md:hidden ml-[50px] uppercase text-gray-400 text-sm text-center">sort Posts by categories</span>
-        <div className='md:hidden flex justify-center items-center flex-col mt-3 h-max bg-blue-80 rounded-lg py-4'>
+        <div className='md:hidden flex items-center flex-col mt-4 h-max bg-gradient-to-r from-blue-200 py-4'>
           {categories.map((category, index) => (
             <Link  key={index} href={`/category/${category.slug}`}>
-              <span onClick={() => setOpen((prev)=> !prev)} className="mt-2 align-middle text-sm font-semibold ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500 border-b">{category.name}
+              <span onClick={() => setOpen((prev)=> !prev)} className="mt-6 align-middle text-sm font-semibold ml-4 uppercase cursor-pointer transform motion-safe:hover:scale-110 hover:text-red-500 border-b">{category.name}
               </span>
             </Link>
             ))}

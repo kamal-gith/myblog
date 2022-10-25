@@ -31,8 +31,8 @@ const PostDetails = ({ post }) => {
             <PostDetail post={post} />
             <Author author={post.author} />
             {/* <Categories categories={post.categories} /> */}
-            <div>
-              <h3 className='mb-8 text-xl font-semibold text-gray-500 text-center'>Read Next</h3>
+            <div className="border-t p-8">
+              <h3 className='mb-4'>You Might also Like to Read:</h3>
             </div>
             <AdjacentPosts slug={post.slug} createdAt={post.createdAt} />
             <CommentsForm slug={post.slug} />

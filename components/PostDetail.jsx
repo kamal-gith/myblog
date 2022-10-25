@@ -69,25 +69,43 @@ const PostDetail = ({ post }) => {
     <>
 
       
-      <div className="bg-white shadow-sm rounded-lg lg:p-8 pb-12 border-t z-10">
-        <div className="flex flex-col justify-center relative overflow-hidden shadow-md mb-6 mt-3 ">
-        <h1 className="text-center text-capitalize text-lg capitalize font-semibold">{post.title}</h1>
-          <h2 className=" m-4 text-lg text-center"> {post.excerpt}</h2>
+      <div className="bg-white rounded-lg lg:p-8 pb-12 border-t z-10">
+        <div className="flex flex-col justify-center relative overflow-hidden mb-6 mt-3 ">
+        <h1 className="text-left text-4xl capitalize">{post.title}</h1>
+        <h1 className="text-left text-4xl capitalize">{post.category }</h1>
+
+          {/* <h2 className=" m-4 text-lg text-center"> {post.excerpt}</h2> */}
           
-          <div className='flex justify-center border-t border-gray-200 space-between'>
-          <div className="flex items-center mt-4">
-            <div className="flex items-center justify-center lg:mb-0 lg:w-auto mr-5 items-center">
-              <p className="inline align-middle text-gray-500 ml-2 text-md">{post.author.name} </p>
-            </div> <div className='h-2 w-2 mr-2 bg-gray-300 rounded-full' />
-            <div className="font-medium text-gray-700">
-              <span className="text-gray-500 mt-2 text-md ml-3">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+          <div className='flex justify-left lg:justify-center p-5'>
+          <div className="flex items-left mt-4">
+            <Image
+              unoptimized
+              alt={post.author.name}
+              height="50px"
+              width="50px"
+              className="align-middle rounded-full"
+              src={post.author.photo.url}
+            />
+            <div className="flex flex-col ml-6">
+              <p className="text-md">{post.author.name} </p>
+              <span className="text-gray-400 text-md">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+            </div> 
+
+            <div className='flex lg:gap-8 gap-4 ml-8'>
+              <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={25} round className='transform motion-safe:hover:scale-110'/></FacebookShareButton>
+              <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={25} round className='transform motion-safe:hover:scale-110'/></LinkedinShareButton>
+              <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={25} round className='transform motion-safe:hover:scale-110'/></WhatsappShareButton>
+              <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={25} round className='transform motion-safe:hover:scale-110'/></TwitterShareButton>
             </div>
+
+            
           </div>
           </div>
           
           <img src={post.featuredImage.url} alt="" className="mt-10 object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
         <div className="px-4 lg:px-0">
+          <p className='mb-8'>{post.excerpt}</p>
 
         <RichText
           content={post.content.raw.children}
