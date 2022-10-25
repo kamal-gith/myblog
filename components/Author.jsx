@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { grpahCMSImageLoader } from '../util';
+import { graphCMSImageLoader } from '../util';
 
 const Author = ({ author }) => (
   <div className="py-5 px-10 relative bg-gradient-to-r from-blue-100 flex justify-center mb-10 rounded-lg">
@@ -9,7 +9,7 @@ const Author = ({ author }) => (
     <div className="mr-10 ">
       <Image
         unoptimized
-        loader={grpahCMSImageLoader}
+        loader={graphCMSImageLoader}
         alt={author.name}
         height="70px"
         width="70px"
