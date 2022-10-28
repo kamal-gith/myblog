@@ -5,11 +5,12 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="sticky top-0 z-10 border-blue-400 w-full flex justify-center px-1 w-full bg-black">
+    <div className="sticky top-0 z-10 border-blue-400 w-full flex justify-center px-1 w-full bg-red-800">
         <div className="flex justify-center relative py-2 md:py-2 px-1 w-full">
             <div className="mt-3 mr-10 md:mr-10">
               <Link href='/'>
-                <AiOutlineHome size={25} className="text-gray-400 cursor-pointer"/>
+                {/* <AiOutlineHome size={25} className="text-white cursor-pointer"/> */}
+                <span className='bg-white p-2 rounded-lg hover:text-white hover:bg-red-800 hover:border-white border cursor-pointer font-bold text-gray-600'>astermira</span>
               </Link>
             </div>
             <div className="md:flex-3 md:w-[70%] mt-4 flex justify-center">

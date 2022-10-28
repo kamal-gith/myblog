@@ -19,6 +19,7 @@
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-multi-carousel": "^2.6.5",
+    "react-social-media-embed": "^2.2.2",
     "sass": "^1.43.4",
     "scripts": "^0.1.0"
   },

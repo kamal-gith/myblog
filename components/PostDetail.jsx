@@ -10,6 +10,9 @@ import { FacebookShareButton, FacebookIcon, TelegramShareButton, TelegramIcon, T
   LinkedinShareButton, LinkedinIcon, } from 'next-share';
 import Image from 'next/image';
 
+import { BsFillShareFill } from 'react-icons/bs';
+
+
 const PostDetail = ({ post }) => {
 
   useEffect(() => {
@@ -76,30 +79,30 @@ const PostDetail = ({ post }) => {
 
           {/* <h2 className=" m-4 text-lg text-center"> {post.excerpt}</h2> */}
           
-          <div className='flex justify-left lg:justify-center p-3'>
-          <div className="flex items-left mt-4">
-            <Image
-              unoptimized
-              alt={post.author.name}
-              height="50px"
-              width="50px"
-              className="rounded-full"
-              src={post.author.photo.url}
-            />
-            <div className="flex flex-col ml-3">
-              <p className="">{post.author.name} </p>
-              <span className="text-gray-400 text-sm">{moment(post.createdAt).startOf('hour').fromNow()}</span>
-            </div> 
-
-            <div className='flex lg:gap-8 gap-3 ml-6'>
-              <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={25} round className='transform motion-safe:hover:scale-110'/></FacebookShareButton>
-              <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={25} round className='transform motion-safe:hover:scale-110'/></LinkedinShareButton>
-              <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={25} round className='transform motion-safe:hover:scale-110'/></TwitterShareButton>
+          <div className='flex justify-center lg:justify-center p-3'>
+            <div className="flex items-center mt-4">
+              <Image
+                unoptimized
+                alt={post.author.name}
+                height="50px"
+                width="50px"
+                className="rounded-full"
+                src={post.author.photo.url}
+              />
+              <div className="flex flex-col ml-3">
+                <p className="">{post.author.name} </p>
+                <span className="text-gray-400 text-sm">{moment(post.createdAt).startOf('hour').fromNow()}</span>
+              </div> 
             </div>
-
-            
           </div>
-          </div>
+              <div className='flex justify-center gap-3 py-4'>
+                <span>Share</span><BsFillShareFill className='mt-1 text-lg mr-4 text-gray-600'/>
+                <FacebookShareButton url={'https://astermira.vercel.app/post/'+post.slug}><FacebookIcon size={25} round className='transform motion-safe:hover:scale-110'/></FacebookShareButton>
+                <TelegramShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TelegramIcon size={25} round className='transform motion-safe:hover:scale-110'/></TelegramShareButton>
+                <LinkedinShareButton url={'https://astermira.vercel.app/post/'+post.slug}><LinkedinIcon size={25} round className='transform motion-safe:hover:scale-110'/></LinkedinShareButton>
+                <WhatsappShareButton url={'https://astermira.vercel.app/post/'+post.slug}><WhatsappIcon size={25} round className='transform motion-safe:hover:scale-110'/></WhatsappShareButton>
+                <TwitterShareButton url={'https://astermira.vercel.app/post/'+post.slug}><TwitterIcon size={25} round className='transform motion-safe:hover:scale-110'/></TwitterShareButton>
+              </div>
           
           <img src={post.featuredImage.url} alt="" className="mt-10 object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>

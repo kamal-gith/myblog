@@ -26,18 +26,12 @@ const Header = () => {
             unoptimized
             alt=''
             href='/'
-            height="10px"
+            height="40px"
             width="40px"
             className="cursor-pointer "
             src={logo}
           />
-          <div className='border-none rounded-lg transform motion-safe:hover:scale-110 border-gray-200'>
-            <Link href="/">
-            <span className="m-2 font-bold inline-block text-gray-600 md:text-2xl text-xl cursor-pointer">
-              astermira 
-            </span>
-            </Link>
-          </div>
+          
             
           {/* <div className='ml-20'>
             <span className="mt-5 inline-block text-gray-600 font-semibold justify-end md:hidden">{moment().format('dddd Do MMMM, YYYY.')}</span>
