@@ -10,7 +10,7 @@ const Banner = () => {
             <div className="mt-3 mr-10 md:mr-10">
               <Link href='/'>
                 {/* <AiOutlineHome size={25} className="text-white cursor-pointer"/> */}
-                <span className='bg-white p-2 rounded-lg hover:text-white hover:bg-red-800 hover:border-white border cursor-pointer font-bold text-gray-600'>astermira</span>
+                <span className='bg-white p-2 rounded-lg hover:text-white hover:bg-red-800 hover:border-white border cursor-pointer font-bold text-red-800'>astermira</span>
               </Link>
             </div>
             <div className="md:flex-3 md:w-[70%] mt-4 flex justify-center">
