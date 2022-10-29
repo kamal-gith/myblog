@@ -1,60 +1,64 @@
 import React from 'react';
 import Link from 'next/link';
-import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube } from "react-icons/ai";
+import { AiFillFacebook, AiFillInstagram, AiFillTwitterSquare, AiFillYoutube, AiFillLinkedin } from "react-icons/ai";
+import logo from './logo.jpg'
+import Image from 'next/image';
+
+
 
 const Footer = () => {
   
   return (
-    <div className="bg-blue-50 px-4 my-2 mx-6 rounded-lg shadow-md m-2 md:w-full">
-      
-        <div className="flex justify-evenly">
-        <div className='mt-4'>
-            <Link href="/">
-                <span className='text-sm cursor-pointer'> About Us</span> 
-            </Link>
-        </div>
-        <div className='mt-4'>
-            <Link href="/">
-                <span className='text-sm cursor-pointer'>Privacy</span> 
-            </Link>
-        </div>
-        <div className='mt-4'>
-            <Link href="/">
-                <span className='text-sm cursor-pointer'> Advertisement</span> 
-            </Link>
-        </div>
-        </div>
+    <div className="p-4 py-10 flex flex-col lg:flex-row gap-8 lg:gap-10 justify-between bg-gradient-to-r from-blue-900 rounded-lg shadow-md m-2">
+      <div className='w-[45%]'>
+        <Image
+            unoptimized
+            alt=''
+            height="50px"
+            width="50px"
+            className="rounded-full"
+            src={logo}
+        />
+        <br />
+        <span className='text-white'> &copy; 2021 - {new Date().getFullYear()} | All Rights Reserved. astermira, inc</span>
+      </div>
+      <div className=''>
+        <span className='text-white lg:text-blue-900 lg:font-bold'>Company</span>
+        <br />
+        <span className='text-gray-400 lg:text-black hover:text-white cursor-pointer'>About Us</span> <br />
+        <span className='text-gray-400 lg:text-black hover:text-white cursor-pointer'>Contact Us</span> <br />
+        <span className='text-gray-400 lg:text-black hover:text-white cursor-pointer'>Career</span> <br />
+        <span className='text-gray-400 lg:text-black hover:text-white cursor-pointer'>Advertisement</span> <br />
+      </div>
+      <div className=''>
+        <span className='text-white lg:text-blue-900 lg:font-bold'>Quick Links</span>
+        <br />
+        <span className='text-gray-400 lg:text-black hover:text-white cursor-pointer'>Privacy</span> <br />
+        <span className='text-gray-400 lg:text-black hover:text-white cursor-pointer'>Terms & Conditions</span> <br />
+        <span className='text-gray-400 lg:text-black hover:text-white cursor-pointer'>News Categories</span> <br />
+      </div>
+      <div className='lg:w-[30%] w-[60%] lg:justify-center justify-left'>
+        <span className='text-white lg:text-gray-600 lg:text-blue-900 lg:font-bold'>We Are Social</span> <br />
+        <div className='flex gap-3 mt-3'>
+                    <Link href="/">
+                    <AiFillTwitterSquare className='text-3xl cursor-pointer hover:text-white' />
+                    </Link>
+                    <Link href="https://fb.me/astamira">
+                    <AiFillFacebook className='text-3xl cursor-pointer hover:text-white' />
+                    </Link>
+                    <Link href="https://www.instagram.com/astermirablog">
+                    <AiFillInstagram className='text-3xl cursor-pointer hover:text-white' />
+                    </Link>
+                    <Link href="/">
+                    <AiFillYoutube className='text-3xl cursor-pointer hover:text-white' />
+                    </Link>
+                    <Link href="https://www.linkedin.com/company/astermira">
+                    <AiFillLinkedin className='text-3xl cursor-pointer hover:text-white' />
+                    </Link>
+                </div>
         
-        <div className=' text-gray-600 flex items-center justify-center mt-4 items-center'>
-            <p className='text-sm'>We're Social: </p>
-            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full mr-2 ml-2'>
-                <Link href="https://fb.me/astamira">
-                <AiFillFacebook className='text-2xl cursor-pointer'/>
-                </Link>
-            </div>
-            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full mr-2'>
-                <Link href="https://www.instagram.com/astermirablog">
-                <AiFillInstagram className='text-2xl cursor-pointer'/>
-                </Link>
-            </div>
-            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full mr-2'>
-                <Link href="/">
-                <AiFillYoutube className='text-2xl cursor-pointer'/>
-                </Link>
-            </div>
-            <div className='h-10 w-10 flex justify-center items-center bg-white shadow-sm rounded-full'>
-                <Link href="/">
-                <AiFillTwitterSquare className='text-2xl cursor-pointer' />
-                </Link>
-            </div>
-            
-            
-            
-        </div>
-        <div className='flex items-center justify-center mt-2 items-center'>
-            <p className='mb-4 text-[10px] mt-2'> <span className='mr-1'> &copy; 2021 - {new Date().getFullYear()}</span> | <span className="ml-1"> All Rights Reserved. astermira, Inc.</span> </p>
-        </div>
         
+      </div>
     </div>
   );
 };
