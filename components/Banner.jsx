@@ -5,33 +5,33 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="sticky top-0 z-10 border-blue-400 w-full flex justify-center px-1 w-full bg-red-800">
-        <div className="flex justify-center relative py-2 md:py-2 px-1 w-full">
-            <div className="mt-3 mr-10 md:mr-10">
+    <div className="sticky top-0 z-10 flex py-6 justify-center px-1 bg-red-800">
+        <div className="flex space-x-10 relative">
+            <div className="">
               <Link href='/'>
                 {/* <AiOutlineHome size={25} className="text-white cursor-pointer"/> */}
-                <span className='bg-white p-2 rounded-full hover:text-white hover:bg-red-800 hover:border-white border cursor-pointer font-bold text-red-800'>astermira</span>
+                <span className='text-white font-bold border border-white rounded-md p-2 hover:bg-white hover:text-red-900 cursor-pointer'>astermira</span>
               </Link>
             </div>
-            <div className="md:flex-3 md:w-[70%] mt-4 flex justify-center">
+            <div className="flex gap-2 text-xl md:text-2xl text-gray-300">
               {/* <span className="mr-3"> <strong>astermira</strong> is social </span> */}
               <Link href="https://fb.me/astamira">
-                <AiFillFacebook className='cursor-pointer mr-2 text-xl text-gray-400 md:text-2xl'/>
+                <AiFillFacebook className='cursor-pointer hover:text-white'/>
               </Link>
               <Link href="https://www.instagram.com/astermirablog">
-                <AiFillInstagram className='text-gray-400 cursor-pointer mr-2 text-xl md:text-2xl'/>
+                <AiFillInstagram className='cursor-pointer hover:text-white'/>
               </Link>
               {/* <Link href="/">
-                <AiFillYoutube className='text-gray-600 text-xl md:text-2xl mr-2 cursor-pointer'/>
+                <AiFillYoutube className='text-gray-600 text-xl md:text-2xl mr-2 cursor-pointer hover:text-white'/>
               </Link> */}
               <Link href="/">
-                <AiFillTwitterSquare className='text-gray-400 cursor-pointer text-xl md:text-2xl' />
+                <AiFillTwitterSquare className='cursor-pointer hover:text-white' />
               </Link>
               </div>
             
-        <div className=" mt-1 ml-4 py-2 md:py-2 px-1">
-            <span className="text-[14px] text-bold text-gray-200 capitalize ml-5">{moment().format('ddd.  Do MMM, YYYY.')}</span>
-        </div>
+            <div className="">
+                <span className="text-[14px] text-gray-200 capitalize">{moment().format('ddd.  Do MMM, YYYY.')}</span>
+            </div>
         </div>
     </div>
   )
