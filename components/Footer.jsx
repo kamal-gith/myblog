@@ -9,7 +9,7 @@ import Image from 'next/image';
 const Footer = () => {
   
   return (
-    <div className="w-full p-4 py-10 flex flex-col md:flex-row gap-8 md:gap-10 justify-between bg-gradient-to-r from-red-700 to-blue-900 rounded-lg shadow-md m-2">
+    <div className="w-full p-4 py-10 flex flex-col md:flex-row gap-8 md:gap-10 justify-between bg-black rounded-lg shadow-md m-2">
       <div className='md:w-[40%] w-full'>
         <Image
             unoptimized
