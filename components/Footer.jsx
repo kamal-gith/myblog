@@ -20,8 +20,8 @@ const Footer = () => {
             src={logo}
         />
         <br />
-        <span className='text-gray-300'> &copy; 2021 - {new Date().getFullYear()} | All Rights Reserved. <span className='text-white'>astermira, inc</span></span>
-        <br/> <a className='text-gray-300 underline hover:text-white cursor-pointer' href='https://kamal-ai.netlify.app/' target="_blank" rel="noopener noreferrer">Contact the Developer</a>
+        <span className='text-sm text-gray-300'> &copy; 2021 - {new Date().getFullYear()} | All Rights Reserved. <span className='text-white'>astermira, inc</span></span>
+        <br/> <a className='text-sm text-gray-300 underline hover:text-white cursor-pointer' href='https://kamal-ai.netlify.app/' target="_blank" rel="noopener noreferrer">Contact the Developer</a>
       </div>
       <div className=''>
         <span className='text-white md:text-blue-900 md:font-bold'>Company</span>
